@@ -212,7 +212,7 @@ M.launch=function()
 			var cost=Game.cookiesPsRawHighest*costInS;
 			var overhead=1+0.01*(20*Math.pow(0.95,M.brokers));
 			cost*=overhead;
-			if (n==10000) n=Math.floor(Game.cookies/cost);
+			if (n==0) n=Math.floor(Game.cookies/cost);
 			n=Math.min(n,M.getGoodMaxStock(me)-me.stock);
 			if (n>0 && me.last!=2 && Game.cookies>=cost*n && me.stock+n<=M.getGoodMaxStock(me))
 			{
