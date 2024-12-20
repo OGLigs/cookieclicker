@@ -154,7 +154,8 @@ M.launch=function()
 				var maxStock=M.getGoodMaxStock(me);
 				if (buyOrSell) overhead*=1+0.01*(20*Math.pow(0.95,M.brokers));
 				cost*=overhead;
-				if (n==10000) n=Math.floor(Game.cookies/cost);
+				if (n==0
+				) n=Math.floor(Game.cookies/cost);
 				else if (n==-10000) n=me.stock;
 				n=Math.abs(n);
 				if (buyOrSell) n=Math.min(n,maxStock-stock);
